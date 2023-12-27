@@ -5,7 +5,7 @@ import { useState } from "react";
 const validCode = "🐡🐠🐋";
 
 export default function App() {
-  const [code, setCode] = useState();
+  const [code, setCode] = useState("");
 
   function handleFishClick(event) {
     const clickedFish = event.target.textContent;
@@ -15,7 +15,9 @@ export default function App() {
 
   function handleResetClick() {
     setCode("");
+    console.log("Reset");
   }
+
   return (
     <div className="container">
       <div className="button-container">
